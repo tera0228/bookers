@@ -1,0 +1,19 @@
+<!--　フラッシュメッセージ用 -->
+<% if flash[:notice] %>
+<p><%= flash[:notice] %></p>
+<% end %>
+
+<!-- 詳細画面作成 -->
+<p>
+  <strong>Title:</strong>
+  <%= @books.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @books.body %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_book_path(@books) %> | <a href = "/books">Back</a>
+</p>
